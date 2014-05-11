@@ -1,0 +1,295 @@
+.navbar {
+    margin: 0 auto;
+    /*    box-shadow: 0 -1px 2px rgba(0,0,0,0.3);*/
+}
+.container-fluid[role="main"], .container-fluid[role="footer"] {
+    padding-top: 5px;
+    background: white;
+    overflow:auto;
+}
+#navbar-1 {
+    font-size: 0.8em;
+    z-index:1001;
+    min-height: 30px;
+}
+#navbar-1 .navbar-text {
+    margin-top:10px;
+}
+#navbar-1 button {
+    margin:5px 0;
+}
+#navbar-1[role="menu"] {
+    position:absolute;
+}
+#navbar-1 .breadcrumb {
+    background: transparent;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.breadcrumb li.active a {
+    color:red;
+}
+#navbar-1 .glyphicon {
+    font-size:1.2em;
+}
+#navbar-1 .badge {
+    background:red;
+    font-size: 0.9em;
+    position:relative;
+    top: -2px;
+    left: -2px;
+    padding: 1px 3px;
+}
+#navbar-1 .dropdown-menu {
+    margin-top:-5px;
+}
+#navbar-1 .dropdown-menu li a:hover {
+    color: white;
+    background: black;
+}
+#navbar-branding {
+    background: white;
+}
+#navbar-branding .navbar-brand.roda {
+    background: url('../images/logo-roda.png') no-repeat 50%;
+    background-size: 100%;
+    height:0;
+    width:100%;
+    padding-bottom: 10%;
+    padding-left: 15px;
+    margin-left:0;
+}
+#navbar-branding .navbar-brand.banner {
+    background-size: 100%;
+    width: 100%;
+    background: gray;
+    height:0;
+    padding-bottom: 22%;
+    color: white;
+    text-align: center;
+    font-size:2em;
+    line-height: 2em;
+    margin: 2px 15px 2px 0px;
+}
+#navbar-menu {
+}
+#navbar-menu .container-fluid {
+    background: #193284;
+    background-clip: content-box;
+}
+#navbar-menu .row {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+#veleprodaje {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#searchprod {
+    margin: 10px 10px;
+}
+#korpa {
+    text-align: right;
+    color: white;
+    padding-right:1em;
+    margin-bottom: 0;
+    line-height: 2em;
+    white-space: nowrap;
+}
+.navbar[role="navigation"] {
+    z-index:0;
+}
+#prod_menu {
+    background: #4767b0;
+    padding-right:0;
+    font-size:1em;
+}
+#prod_menu .panel > a {
+    background: #19337e;
+    color:white;
+    border-radius: 0;
+    padding: 10px;
+    font-weight:bold;
+}
+#prod_menu .panel > a:hover, #prod_menu .panel.active > a {
+    background: #446ab3;
+}
+#prod_menu .panel > a {
+    position: relative;
+    padding-right: 20px;
+}
+#prod_menu .panel > a > span {
+    position: absolute;
+    right:5px;
+    top: 5px;
+    bottom: 0;
+    height:50%;
+    margin:auto;
+    display:block;
+}
+#prod_menu .panel {
+    border:none;
+    margin-bottom: 0;
+    border-radius:0;
+}
+#prod_menu .panel ul li {
+    padding-left:2em;
+}
+#prod_menu .panel .active a {
+    position: relative;
+    background:none;
+    color:#428bca;
+}
+#prod_menu .panel .active a > span.glyphicon {
+    position: absolute;
+    left:-10px;
+    color:red;
+    top:1em;
+}
+#prod_menu .panel .collapse a:hover {
+    color:red;
+}
+#prod_menu .panel .collapse .active {
+    font-weight:bold;
+}
+#prod_menu .panel .collapse .active a {
+    color:red;
+}
+.banner {
+    text-align: center;
+    background:gray;
+    color:white;
+    font-size:3em;
+    line-height:4em;
+}
+.main-pag {
+    background: #436ab3;
+}
+.main-pag .pagination {
+    margin:9px 0;
+    white-space: nowrap;
+}
+.main-pag .counter {
+    color:white;
+    margin: 9px 0;
+    font-weight: bold;
+}
+.main-pag .form-group {
+    margin: 9px 0;
+    white-space: nowrap;
+}
+.main-pag .form-group button{
+
+}
+.main-pag .form-group label {
+    color: white;
+    font-weight: normal;
+}
+.main-pag .pagination-sm > li > a, .main-pag .pagination-sm > li > span {
+    font-size:11px;
+}
+/*.u-korpu button {
+    width:10px;
+    padding-left: 0;
+    padding-right: 0;
+}*/
+ .u-korpu {
+    min-width: 100px;
+}
+.center-block {
+    text-align: center;
+}
+footer {
+    margin-top:15px;
+}
+footer .navbar-default .navbar-nav > li > a {
+    color:red;
+}
+footer .navbar-brand {
+    min-height:80px;
+}
+footer .navbar-brand.merkator {
+    background: url('../images/merkator.png') no-repeat 50%;
+    background-size: 100%;
+    height:0;
+    width:100%;
+    padding-bottom: 30%;
+    padding-left: 15px;
+    margin-left:0;
+}
+footer .navbar-brand.roda-brand {
+    background: url('../images/roda.png') no-repeat 50%;
+    background-size: 100%;
+    height:0;
+    width:100%;
+    padding-bottom: 30%;
+    padding-left: 15px;
+    margin-left:0;
+}
+footer .copyright a {
+    color:#838383;
+}
+@media only screen and (min-width: 1200px) {
+    .container-fluid[role="main"], .container-fluid[role="footer"] {
+        max-width: 61%;
+        min-width:800px;
+    }
+    .navbar {
+        max-width: 61%;
+        min-width:800px;
+    }
+    body {
+        background: white;
+        background: url('../images/roda-bg.png') no-repeat;
+        background-size: cover;
+        background-position: top center;
+        background-attachment: fixed;
+        overflow-x:hidden;
+        font-size:12px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #searchprod {
+        margin: 0;
+    }
+  }
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+ @media screen and (max-width: 767px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+    .row-offcanvas-right {
+        right: 0;
+    }
+    .row-offcanvas-left {
+        left: 0;
+    }
+    .row-offcanvas-right .sidebar-offcanvas {
+        right: -50%;
+        /* 6 columns */
+    }
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -50%;
+        /* 6 columns */
+    }
+    .row-offcanvas-right.active {
+        right: 50%;
+        /* 6 columns */
+    }
+    .row-offcanvas-left.active {
+        left: 50%;
+        /* 6 columns */
+    }
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        /* 6 columns */
+    }
+}

@@ -30,22 +30,18 @@ class must-have {
     require => Exec["install yeoman"],
   }
 
-  exec { 'install webapp generator':
+  exec { 'change permissions':
       command => '/bin/chown -R vagrant.vagrant /home/vagrant/yeoman',
-      require => Exec['install webapp generator'],
-  }
-
-  file { "/home/vagrant/yeoman/webapp":
-      ensure => "directory",
       before => Exec['create webapp site'],
       require => Exec['install webapp generator'],
   }
 
   exec { 'create webapp site':
-    command => '/usr/bin/yes | /usr/bin/yo webapp',
+    command => '/usr/bin/yes | /usr/bin/yo webapp --skip-install',
     cwd => '/home/vagrant/yeoman/webapp',
     creates => '/home/vagrant/yeoman/webapp/app',
-    require => File["/home/vagrant/yeoman/webapp"],
+    before => File_line['update hostname in gruntfile'],
+    require => Exec["change permissions"],
   }
 
   file_line { "update hostname in gruntfile": 
@@ -54,6 +50,18 @@ class must-have {
     match => "hostname: '.*'", 
     ensure => present,
     require => Exec["create webapp site"],
+  }
+
+  exec { 'install webapp packages':
+    command => "/usr/bin/npm install --no-bin-links",
+    cwd => '/home/vagrant/yeoman/webapp',
+    require => File_line["update hostname in gruntfile"],
+  }
+
+  exec { 'install webapp bower packages':
+    command => "/usr/bin/yes | /usr/bin/bower install --no-bin-links",
+    cwd => '/home/vagrant/yeoman/webapp',
+    require => Exec["install webapp packages"],
   }
 
   package { ["vim",
